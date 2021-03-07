@@ -1,0 +1,41 @@
+.main-header{
+    height: 83px;
+    background-color: #5474FD;
+    @include fullBlock;
+     padding-top: 32px;
+     padding-bottom: 32px;
+     width: 100%;
+     
+ 
+       .logo{
+           font-family: $josefin;
+           float: left;
+           color: $titleColor;
+           text-transform: uppercase;
+           font-weight: 700;
+           font-size: 24px;
+           letter-spacing: 0.150em;
+           a{
+           text-decoration: none;
+         }
+       }   
+ }
+ 
+ 
+ .main-nav{ 
+     color: $textColor;
+     text-transform: uppercase;
+     float: right;
+     ul{
+         display: flex;
+         justify-content: center;
+         text-align: center;
+         align-items: center;
+     }
+     li{
+         padding-left: 30px;
+         font-size: 14px;
+         line-height: 1.625em;
+     }
+ 
+ }

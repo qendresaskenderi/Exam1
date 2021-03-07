@@ -1,3 +1,61 @@
+.hero-banner{
+    background: url(/assets/hero-img.png) no-repeat center;
+    background-size: cover;
+    padding-top: 277px;
+    padding-bottom: 142px;
+    @include fullBlock;
+   
+    & .flex-container{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    &__text {
+        padding-bottom: 48px;
+        color: $textColor;
+        font-family: $josefin;
+       
+    
+
+    & h1 {
+        text-transform: uppercase;
+        margin-bottom: 11px;
+      font-size: 48px;  
+      font-weight: 700;
+      position: relative;
+      letter-spacing: 0.300em;
+      }
+
+      & .subtitle{
+          font-weight: 400;
+          font-size: 22px;
+          letter-spacing: 0.426em;
+      }
+    }
+  
+      &:after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-image: url(/assets/top-star.svg);
+        background-position: center;
+        background-size: 20x;
+        background-repeat: no-repeat;
+        display: block;
+        top: 0;
+        left: 468px;
+        @include mobile {
+          display: none;
+        }
+        @include small-tablet {
+          display: none;
+        }
+      }
+}
+
+
 .explore{
     background: url(/assets/explore-section-bg.png) no-repeat center;
     background-size: cover;
@@ -51,5 +109,26 @@
     }
 }
 
+.book-firstplace{
+    background: url(/assets/book-section1.png) no-repeat center;
+    background-size: cover;
+    @include fullBlock;
+    
+    & .book-places{
+       @include bookPlacesContainer;
+    }
+}
+
+.book-secondplace{
+    background: url(/assets/book-section2.png) no-repeat center;
+    background-size: cover;
+    @include fullBlock;
+    
+    & .book-places{
+        @include bookPlacesContainer;
+        float: right;
+    }
+
+}
 
 

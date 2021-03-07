@@ -21,6 +21,50 @@
     }
   }
 
+  @mixin bookPlacesContainer($width:543px){
+    background: #232323;
+    opacity: 0.9;
+    width: $width;
+    height: 374px;
+    margin-top: 227px;
+    float: left;
+    margin-bottom: 99px;
+    &__text{
+        font-family: $josefin;
+        text-align: left;
+        width: 508px;
+        padding-top: 45px;
+        padding-left: 32px;
+        padding-bottom: 50px;
+        color: $pColor;
+
+        & h5{
+            padding-bottom: 23px;
+            font-size: 20px;
+            letter-spacing: 0.094em;
+        }
+
+        & h3{
+            text-transform: uppercase;
+            padding-bottom: 13px;
+            font-weight: 400;
+        }
+
+        & p{
+            font-size: 16px;
+            line-height: 1.625em;
+        }
+  }
+
+  .btn{
+    @include Btn;
+    position: relative;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    background-color: #5474FD;
+}
+}
+
 //Mobile phones
   @mixin mobile {
     @media (max-width: 767px) {
