@@ -1,0 +1,18 @@
+.container {
+    max-width: 1112px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @mixin fullBlock {
+    width: 100%;
+    float: left;
+  }
+  .block-section {
+    @include fullBlock;
+  }
+
+ 
+
+  

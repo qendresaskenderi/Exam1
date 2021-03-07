@@ -1,0 +1,43 @@
+@mixin Btn($width: 228px) {
+    text-decoration: none;
+    color: $textColor;
+    background: $btncolor;
+    border: 1px solid $btncolor;
+    height: 63px;
+    line-height: 3.938em;
+    letter-spacing: 0.075em;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    width: $width;
+    text-align: center;
+    text-transform: uppercase;
+    &:hover {
+      background: lighten($btncolor, 5%);
+      color: #fff;
+    }
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+
+//Mobile phones
+  @mixin mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  
+  //Small tablets
+  @mixin small-tablet {
+    @media (min-width: 768px) and (max-width: 990px) {
+      @content;
+    }
+  }
+  //Regular Tablets
+  @mixin big-tablet {
+    @media (min-width: 991px) and (max-width: 1024px) {
+      @content;
+    }
+  }
+  

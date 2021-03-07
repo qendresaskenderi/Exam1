@@ -1,0 +1,55 @@
+.explore{
+    background: url(/assets/explore-section-bg.png) no-repeat center;
+    background-size: cover;
+    @include fullBlock;
+    
+
+    &__text{
+          width: 50%;
+          float: left;
+          padding-top: 212px;
+          padding-bottom: 131px;
+          padding-right: 110px;
+
+          & h2{
+              font-size: 36px;
+              margin-bottom: 50px;
+              color: $titleColor;
+              font-family: $aleo;
+              font-weight: 400;
+          }
+
+          & p{
+              color: $pColor;
+              letter-spacing: 0.100em;
+              font-size: 14px;
+              font-weight: normal;
+              font-family: $josefin;
+              padding-bottom: 30px
+          }
+      }
+
+      .btn{
+          @include Btn;
+          position: relative;
+          margin-top: 45px;
+      }
+
+  &__img{
+    width: 50%;
+    float: left;
+    padding-top: 118px;
+    padding-bottom: 117px;
+
+        & .top{
+            padding-bottom: 10px;
+        }
+
+        & .bottom{
+              padding-left: 200px;
+        }
+    }
+}
+
+
+
