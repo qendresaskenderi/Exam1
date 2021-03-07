@@ -11,21 +11,34 @@
         text-align: center;
         flex-direction: column;
     }
-    &__text {
-        padding-bottom: 48px;
-        color: $textColor;
-        font-family: $josefin;
+    
+        &__text {
+             padding-bottom: 48px;
+             color: $textColor;
+             font-family: $josefin;
        
     
 
-    & h1 {
-        text-transform: uppercase;
-        margin-bottom: 11px;
-      font-size: 48px;  
-      font-weight: 700;
-      position: relative;
-      letter-spacing: 0.300em;
-      }
+        & h1 {
+            text-transform: uppercase;
+            margin-bottom: 11px;
+            font-size: 48px;  
+            font-weight: 700;
+            position: relative;
+            letter-spacing: 0.300em;
+
+            @include mobile {
+                font-size: 40px;
+                margin-bottom: 30px;
+              }
+              @include small-tablet {
+                font-size: 50px;
+                margin-bottom: 40px;
+              }
+              @include big-tablet {
+                margin-bottom: 40px;
+              }
+      
 
       & .subtitle{
           font-weight: 400;
@@ -33,41 +46,99 @@
           letter-spacing: 0.426em;
       }
     }
+}
   
-      &:after {
-        content: "";
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        background-image: url(/assets/top-star.svg);
-        background-position: center;
-        background-size: 20x;
-        background-repeat: no-repeat;
-        display: block;
-        top: 0;
-        left: 468px;
-        @include mobile {
-          display: none;
+      .searchbox{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 107px;
+        
+    }
+
+    
+    .searchbox input {
+        color: #999999;
+        padding: 19px;
+        font-size: 14px;
+        padding-left: 113px;
+        letter-spacing: 0.175em;
+        border: 1px solid white;
+        width: 50%;
+        background:white;
+
+        &:focus{
+            outline: none;
         }
-        @include small-tablet {
-          display: none;
-        }
+
+      }
+      
+      .searchbox button {
+        float: left;
+        color: white;
+        width: 153px;
+        padding: 18px;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: $aleo;
+        letter-spacing: 0.087em;
+        background: #5474FD;
+        border: 1px solid white;
+        border-left: none;
+        cursor: pointer;
+        &:hover {
+            background: lighten($btncolor, 5%);
+            color: #fff;
+          }
+          &:focus{
+              outline: none;
+              border-left: 1px solid white;
+          }
+          &:active {
+            outline: none;
+            transform: scale(0.97);
+          }
+      }
+    
+
+      &__scrolldown{
+          font-weight: 400;
+          letter-spacing: 0.087em;
+          color: white;
+          font-family: $josefin;
+
+          a:hover {
+            cursor: pointer;
+          }
       }
 }
+
+
 
 
 .explore{
     background: url(/assets/explore-section-bg.png) no-repeat center;
     background-size: cover;
     @include fullBlock;
+
+    @include mobile {
+        margin-top: 80px;
+        margin-bottom: 80px;
+      }
+      @include small-tablet {
+        margin-top: 80px;
+        margin-bottom: 80px;
+      }
+      @include big-tablet {
+        margin-top: 120px;
+        margin-bottom: 0;
+      }
     
 
     &__text{
           width: 50%;
           float: left;
-          padding-top: 212px;
-          padding-bottom: 131px;
-          padding-right: 110px;
+          margin-top: 210px;
+          margin-bottom: 131px;
 
           & h2{
               font-size: 36px;
@@ -80,10 +151,12 @@
           & p{
               color: $pColor;
               letter-spacing: 0.100em;
+              line-height: 26px;
               font-size: 14px;
               font-weight: normal;
               font-family: $josefin;
-              padding-bottom: 30px
+              padding-bottom: 20px;
+              max-width: 560px;
           }
       }
 
@@ -94,17 +167,18 @@
       }
 
   &__img{
-    width: 50%;
     float: left;
-    padding-top: 118px;
-    padding-bottom: 117px;
+    width: 50%;
+    margin-top: 120px;
+    
 
         & .top{
             padding-bottom: 10px;
+            padding-left: 110px;
         }
 
         & .bottom{
-              padding-left: 200px;
+            padding-left: 200px;
         }
     }
 }
